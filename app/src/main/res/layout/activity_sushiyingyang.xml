@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#28c8b7">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="素食 营养"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_sousuo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/fang"
+                android:drawableLeft="@mipmap/ic_launcher"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="可搜索食物名称"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_chaxun"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ffff"
+                    android:drawableTop="@mipmap/ic_launcher"
+                    android:text="营养查询" />
+
+                <Button
+                    android:id="@+id/bt_shuguo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ffff"
+                    android:drawableTop="@mipmap/ic_launcher"
+                    android:text="时令蔬果" />
+
+                <Button
+                    android:id="@+id/bt_duibi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ffff"
+                    android:drawableTop="@mipmap/ic_launcher"
+                    android:text="食物对比" />
+
+                <Button
+                    android:id="@+id/bt_tiaozhan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ffff"
+                    android:drawableTop="@mipmap/ic_launcher"
+                    android:text="问答挑战" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tishi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="13dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#9fc6c6c6" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginRight="60dp"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="特别提示"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_tishiguanbi"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/ic_launcher" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="80dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/right_yuanjiao_hui"
+                    android:padding="10dp"
+                    android:text="个能鹅鹅鹅可劲儿可劲儿昆仑决儿科了金额可累计额昆仑决" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/left_yuanjiao_hui"
+                    android:padding="10dp"
+                    android:text="个能鹅鹅鹅可劲儿可劲儿昆仑决儿科了金额可累计额昆仑决" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="13dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="#9fc6c6c6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginRight="60dp"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="互相帮助"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_bangzhu"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/ic_launcher" />
+                </RelativeLayout>
+
+                <!--<ListView-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:id="@+id/lv_bangzhu"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--</ListView>-->
+
+                <include
+                    layout="@layout/bangzhu_item" />
+
+                <include layout="@layout/bangzhu_item" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="13dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="#9fc6c6c6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="100dp"
+                        android:src="@mipmap/ic_launcher"
+                        android:layout_alignTop="@+id/iv_zhishi"
+                        android:layout_toStartOf="@+id/textView" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="素食知识"
+                        android:textSize="20sp"
+                        android:id="@+id/textView" />
+
+                    <ImageView
+                        android:id="@+id/iv_zhishi"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/ic_launcher" />
+                </RelativeLayout>
+
+                <include layout="@layout/zhishi_item"/>
+                <include layout="@layout/zhishi_item"/>
+                <include layout="@layout/zhishi_item"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

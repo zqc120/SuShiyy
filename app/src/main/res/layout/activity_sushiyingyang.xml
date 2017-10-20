@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#ffffff">
+    android:background="#ffffff"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -133,22 +133,25 @@
                 </RelativeLayout>
 
                 <TextView
+                    android:id="@+id/tv_tips_one"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="80dp"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/right_yuanjiao_hui"
                     android:padding="10dp"
-                    android:text="个能鹅鹅鹅可劲儿可劲儿昆仑决儿科了金额可累计额昆仑决" />
+                    android:text="" />
 
                 <TextView
+                    android:id="@+id/tv_tips_two"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="80dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/left_yuanjiao_hui"
                     android:padding="10dp"
-                    android:text="个能鹅鹅鹅可劲儿可劲儿昆仑决儿科了金额可累计额昆仑决" />
+                    android:text=""
+                    android:visibility="gone" />
             </LinearLayout>
 
             <TextView
@@ -192,18 +195,13 @@
                         android:src="@mipmap/ic_launcher" />
                 </RelativeLayout>
 
-                <!--<ListView-->
-                <!--android:layout_marginTop="10dp"-->
-                <!--android:id="@+id/lv_bangzhu"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content">-->
+                <com.example.sushiyingyang.view.MyListView
+                    android:id="@+id/lv_bangzhu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
 
-                <!--</ListView>-->
-
-                <include
-                    layout="@layout/bangzhu_item" />
-
-                <include layout="@layout/bangzhu_item" />
+                </com.example.sushiyingyang.view.MyListView>
 
             </LinearLayout>
 
@@ -226,18 +224,18 @@
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:layout_marginLeft="100dp"
-                        android:src="@mipmap/ic_launcher"
                         android:layout_alignTop="@+id/iv_zhishi"
-                        android:layout_toStartOf="@+id/textView" />
+                        android:layout_marginLeft="100dp"
+                        android:layout_toStartOf="@+id/textView"
+                        android:src="@mipmap/ic_launcher" />
 
                     <TextView
+                        android:id="@+id/textView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:text="素食知识"
-                        android:textSize="20sp"
-                        android:id="@+id/textView" />
+                        android:textSize="20sp" />
 
                     <ImageView
                         android:id="@+id/iv_zhishi"
@@ -248,10 +246,12 @@
                         android:layout_marginRight="20dp"
                         android:src="@mipmap/ic_launcher" />
                 </RelativeLayout>
+                <com.example.sushiyingyang.view.MyListView
+                    android:id="@+id/lv_knowledge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <include layout="@layout/zhishi_item"/>
-                <include layout="@layout/zhishi_item"/>
-                <include layout="@layout/zhishi_item"/>
+                </com.example.sushiyingyang.view.MyListView>
 
             </LinearLayout>
 

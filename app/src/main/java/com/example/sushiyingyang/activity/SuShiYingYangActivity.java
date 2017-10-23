@@ -55,6 +55,7 @@ public class SuShiYingYangActivity extends Activity{
     private List<SsyyInfo.ResultBean.KnowledgeListBean> list_knowledge;
     private MyListView lv_bangzhu,lv_knowledge;
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -205,6 +206,13 @@ public class SuShiYingYangActivity extends Activity{
         tips_two = (TextView) findViewById(R.id.tv_tips_two);
         lv_bangzhu = (MyListView) findViewById(R.id.lv_bangzhu);
         lv_knowledge = (MyListView) findViewById(R.id.lv_knowledge);
+        tv_sousuo = (TextView) findViewById(R.id.tv_sousuo);
+        tv_sousuo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         tishiguanbi.setOnClickListener(new View.OnClickListener() {
             @Override

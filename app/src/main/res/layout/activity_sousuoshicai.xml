@@ -2,8 +2,87 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     android:orientation="vertical">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <SearchView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:iconifiedByDefault="false"
+            android:queryHint="可搜索食物名称">
+
+        </SearchView>
+
+        <TextView
+            android:id="@+id/tv_quxiao"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="取消"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_shucai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ffff"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:text="蔬菜" />
+
+        <Button
+            android:id="@+id/bt_shuiguo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ffff"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:text="水果" />
+
+        <Button
+            android:id="@+id/bt_liangyou"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ffff"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:text="粮油" />
+
+        <Button
+            android:id="@+id/bt_ganguo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ffff"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:text="干果" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_shicai"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
 
 
 </LinearLayout>

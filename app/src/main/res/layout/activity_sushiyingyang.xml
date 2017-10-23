@@ -222,11 +222,11 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
+                        android:layout_marginRight="60dp"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:layout_alignTop="@+id/iv_zhishi"
+                        android:layout_centerVertical="true"
                         android:layout_marginLeft="100dp"
-                        android:layout_toStartOf="@+id/textView"
                         android:src="@mipmap/ic_launcher" />
 
                     <TextView
@@ -247,6 +247,7 @@
                         android:src="@mipmap/ic_launcher" />
                 </RelativeLayout>
                 <com.example.sushiyingyang.view.MyListView
+                    android:layout_marginTop="10dp"
                     android:id="@+id/lv_knowledge"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">

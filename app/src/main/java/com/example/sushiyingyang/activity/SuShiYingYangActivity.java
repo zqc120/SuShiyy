@@ -207,10 +207,12 @@ public class SuShiYingYangActivity extends Activity{
         lv_bangzhu = (MyListView) findViewById(R.id.lv_bangzhu);
         lv_knowledge = (MyListView) findViewById(R.id.lv_knowledge);
         tv_sousuo = (TextView) findViewById(R.id.tv_sousuo);
+        lv_bangzhu.setFocusable(false);
+        lv_knowledge.setFocusable(false);
         tv_sousuo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(SuShiYingYangActivity.this,SouSuoShiCaiActivity.class));
             }
         });
 

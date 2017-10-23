@@ -7,19 +7,19 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.sushiyingyang.R;
-import com.example.sushiyingyang.info.YychaxunInfo;
+import com.example.sushiyingyang.info.ShiCaiInfo;
 
 import java.util.List;
 
 /**
- * Created by Administrator on 2017-10-20.
+ * Created by Administrator on 2017-10-23.
  */
 
-public class List_YyChaXun_adapter extends BaseAdapter{
-    private List<YychaxunInfo.ResultBean.ListBean> list;
+public class List_shicai_adapter extends BaseAdapter{
+    private List<ShiCaiInfo.ResultBean.ListBean> list;
     private Context ctx;
 
-    public List_YyChaXun_adapter(List<YychaxunInfo.ResultBean.ListBean> list,Context ctx){
+    public List_shicai_adapter(List<ShiCaiInfo.ResultBean.ListBean> list,Context ctx){
         this.list = list;
         this.ctx = ctx;
     }
@@ -41,12 +41,9 @@ public class List_YyChaXun_adapter extends BaseAdapter{
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        convertView = View.inflate(ctx, R.layout.group_yycx_item,null);
-        TextView name = (TextView) convertView.findViewById(R.id.name);
-        TextView RNI = (TextView) convertView.findViewById(R.id.RNI);
-        name.setText(list.get(position).getName());
-        RNI.setText(list.get(position).getRNI());
-
+        convertView = View.inflate(ctx, R.layout.shicai_item,null);
+        TextView tv_shicai = (TextView) convertView.findViewById(R.id.tv_shicai);
+        tv_shicai.setText(list.get(position).getTitle());
         return convertView;
     }
 }

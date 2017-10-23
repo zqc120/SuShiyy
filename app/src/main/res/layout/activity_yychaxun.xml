@@ -23,6 +23,7 @@
     </RelativeLayout>
 
     <TextView
+        android:textSize="18sp"
         android:padding="18dp"
         android:text="以下是您每日营养摄入量推荐值"
         android:layout_width="match_parent"
@@ -34,4 +35,5 @@
         android:layout_height="wrap_content">
 
     </ListView>
+
 </LinearLayout>

@@ -1,6 +1,7 @@
 package com.example.sushiyingyang.activity;
 
 import android.app.Activity;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
@@ -44,7 +45,8 @@ public class YingYangChaXunActivity extends Activity {
     private List<YychaxunInfo.ResultBean.ListBean> list;
     private ListView ex_lv;
     public int clickPosition = -1;
-
+    private ImageView fanhui;
+    private List<Drawable> list_ima;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -55,6 +57,15 @@ public class YingYangChaXunActivity extends Activity {
         sex = sharedUtils.getString("sex", getBaseContext());
         initView();
         initOkHttp();
+        list_ima = new ArrayList<>();
+        list_ima.add(getResources().getDrawable(R.mipmap.veg1));
+        list_ima.add(getResources().getDrawable(R.mipmap.veg2));
+        list_ima.add(getResources().getDrawable(R.mipmap.veg3));
+        list_ima.add(getResources().getDrawable(R.mipmap.veg4));
+        list_ima.add(getResources().getDrawable(R.mipmap.veg5));
+        list_ima.add(getResources().getDrawable(R.mipmap.vegx));
+        list_ima.add(getResources().getDrawable(R.mipmap.vegy));
+
     }
 
     private void initOkHttp() {
@@ -101,6 +112,13 @@ public class YingYangChaXunActivity extends Activity {
 
     private void initView() {
         ex_lv = (ListView) findViewById(R.id.ex_lv);
+        fanhui = (ImageView) findViewById(R.id.fanhui_yingyangchaxun);
+        fanhui.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     class MyAdapter extends BaseAdapter {
@@ -130,6 +148,8 @@ public class YingYangChaXunActivity extends Activity {
             }else {
                 vh = (MyViewHolder) convertView.getTag();
             }
+            ImageView imas = (ImageView) convertView.findViewById(R.id.img_yycx);
+            imas.setImageDrawable(list_ima.get(position % 7));
             vh.name.setText(list.get(position).getName());
             vh.RNI.setText(list.get(position).getRNI());
             vh.content.setText(list.get(position).getContent());
@@ -162,7 +182,6 @@ public class YingYangChaXunActivity extends Activity {
         LinearLayout ll_hide;
         TextView name, RNI,content;
         ImageView selectorImg;
-
 
         public MyViewHolder(View itemView) {
             this.itemView = itemView;

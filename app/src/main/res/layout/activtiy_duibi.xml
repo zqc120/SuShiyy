@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#00aff0"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_fanhui"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/fanhui" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="对比"
+            android:textColor="#000"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:padding="30dp">
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true">
+
+            <ImageView
+                android:id="@+id/iv_duibi_zuo"
+                android:layout_width="100dp"
+                android:layout_height="72dp" />
+
+            <TextView
+                android:id="@+id/tv_duibi_zuo"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_duibi_zuo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="#cdcdcd"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#000" />
+
+            <ImageView
+                android:id="@+id/iv_cha_zuo"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/cha"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/vs" />
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/iv_duibi_you"
+                android:layout_width="100dp"
+                android:layout_height="72dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:paddingTop="20dp"
+                android:src="@mipmap/jiahao" />
+
+            <TextView
+                android:id="@+id/tv_duibi_you"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_duibi_you"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="#cdcdcd"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#000" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/cha"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#f8f8f8" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="每100克营养元素含量对比" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#f8f8f8" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#dbdbdb">
+
+        <ListView
+            android:id="@+id/lv_duibi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+        </ListView>
+    </LinearLayout>
+
+
+</LinearLayout>

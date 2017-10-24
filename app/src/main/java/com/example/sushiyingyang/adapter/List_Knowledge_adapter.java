@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.sushiyingyang.R;
 import com.example.sushiyingyang.activity.SuShiYingYangActivity;
 import com.example.sushiyingyang.info.SsyyInfo;
@@ -50,6 +51,10 @@ public class List_Knowledge_adapter extends BaseAdapter{
         TextView tv_time = (TextView) convertView.findViewById(R.id.zhishi_item_tv_time);
         tv_title.setText(list.get(position).getTitle());
         tv_time.setText(list.get(position).getTime());
+        Glide.with(ctx)
+                .load("http://www.isuhuo.com/plainLiving/"+list.get(position).getImg_url_1())
+                .into(img_url);
+
         return convertView;
     }
 }

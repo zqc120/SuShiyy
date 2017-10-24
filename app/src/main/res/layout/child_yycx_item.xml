@@ -5,14 +5,15 @@
     android:orientation="vertical"
     android:visibility="gone"
     android:id="@+id/ll_hide"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="40dp"
     >
 
     <TextView
+        android:paddingBottom="20dp"
         android:id="@+id/tv_child_yycx"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
         android:text="sadkfjskfjskljfskajfasksdfj可视对讲付款拉伸适当放宽链接啊卡老" />
 
 </LinearLayout>

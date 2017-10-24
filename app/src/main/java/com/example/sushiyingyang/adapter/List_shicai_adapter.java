@@ -1,12 +1,15 @@
 package com.example.sushiyingyang.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.sushiyingyang.R;
+import com.example.sushiyingyang.activity.ShiCaiDuiBiActivity;
 import com.example.sushiyingyang.info.ShiCaiInfo;
 
 import java.util.List;
@@ -40,10 +43,19 @@ public class List_shicai_adapter extends BaseAdapter{
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         convertView = View.inflate(ctx, R.layout.shicai_item,null);
         TextView tv_shicai = (TextView) convertView.findViewById(R.id.tv_shicai);
         tv_shicai.setText(list.get(position).getTitle());
+        Button bt_jiaru = (Button) convertView.findViewById(R.id.bt_jiaruduibi);
+        bt_jiaru.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ctx, ShiCaiDuiBiActivity.class);
+                intent.putExtra("right_id",list.get(position).getId());
+                ctx.startActivity(intent);
+            }
+        });
         return convertView;
     }
 }

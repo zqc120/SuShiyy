@@ -5,23 +5,38 @@
     android:background="#ffffff"
     android:orientation="vertical">
 
-    <RelativeLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#28c8b7">
+        android:background="#00aff0"
+        android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/ll_fanhui_ssyy"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
-            android:src="@mipmap/ic_launcher" />
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/fanhui" />
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="素食 营养"
-            android:textSize="20sp" />
-    </RelativeLayout>
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="素食营养"
+            android:textColor="#000"
+            android:textSize="18sp" />
+    </FrameLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -38,9 +53,10 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="@drawable/fang"
-                android:drawableLeft="@mipmap/ic_launcher"
+                android:drawableLeft="@mipmap/sousuo"
                 android:drawablePadding="5dp"
                 android:gravity="center_vertical"
+                android:padding="10dp"
                 android:paddingLeft="10dp"
                 android:text="可搜索食物名称"
                 android:textSize="15sp" />
@@ -50,16 +66,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="15dp"
-                android:orientation="horizontal">
+                android:background="#f2f2f2"
+                android:orientation="horizontal"
+                android:padding="10dp">
 
                 <Button
                     android:id="@+id/bt_chaxun"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#ffff"
-                    android:drawableTop="@mipmap/ic_launcher"
+                    android:background="#f2f2f2"
+                    android:drawableTop="@mipmap/shucai"
                     android:text="营养查询" />
 
                 <Button
@@ -67,8 +84,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#ffff"
-                    android:drawableTop="@mipmap/ic_launcher"
+                    android:background="#f2f2f2"
+                    android:drawableTop="@mipmap/shuiguo"
                     android:text="时令蔬果" />
 
                 <Button
@@ -76,8 +93,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#ffff"
-                    android:drawableTop="@mipmap/ic_launcher"
+                    android:background="#f2f2f2"
+                    android:drawableTop="@mipmap/liangyou"
                     android:text="食物对比" />
 
                 <Button
@@ -85,8 +102,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#ffff"
-                    android:drawableTop="@mipmap/ic_launcher"
+                    android:background="#f2f2f2"
+                    android:drawableTop="@mipmap/ganguo"
                     android:text="问答挑战" />
             </LinearLayout>
 
@@ -111,9 +128,9 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_centerVertical="true"
-                        android:layout_marginLeft="100dp"
+                        android:layout_marginLeft="120dp"
                         android:layout_marginRight="60dp"
-                        android:src="@mipmap/ic_launcher" />
+                        android:src="@mipmap/tishi" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -129,7 +146,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="20dp"
-                        android:src="@mipmap/ic_launcher" />
+                        android:src="@mipmap/fangcha" />
                 </RelativeLayout>
 
                 <TextView
@@ -174,9 +191,9 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_centerVertical="true"
-                        android:layout_marginLeft="100dp"
+                        android:layout_marginLeft="120dp"
                         android:layout_marginRight="60dp"
-                        android:src="@mipmap/ic_launcher" />
+                        android:src="@mipmap/yezi" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -192,7 +209,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="20dp"
-                        android:src="@mipmap/ic_launcher" />
+                        android:src="@mipmap/youjiantoufang" />
                 </RelativeLayout>
 
                 <com.example.sushiyingyang.view.MyListView
@@ -222,12 +239,12 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:layout_marginRight="60dp"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_centerVertical="true"
-                        android:layout_marginLeft="100dp"
-                        android:src="@mipmap/ic_launcher" />
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginRight="60dp"
+                        android:src="@mipmap/zhishi" />
 
                     <TextView
                         android:id="@+id/textView"
@@ -244,13 +261,14 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="20dp"
-                        android:src="@mipmap/ic_launcher" />
+                        android:src="@mipmap/youjiantoufang" />
                 </RelativeLayout>
+
                 <com.example.sushiyingyang.view.MyListView
-                    android:layout_marginTop="10dp"
                     android:id="@+id/lv_knowledge"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
 
                 </com.example.sushiyingyang.view.MyListView>
 

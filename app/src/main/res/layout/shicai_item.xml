@@ -12,6 +12,7 @@
         android:text="撒大大三的" />
 
     <Button
+        android:id="@+id/bt_jiaruduibi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"

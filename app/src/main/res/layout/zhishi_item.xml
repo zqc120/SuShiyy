@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="70dp">
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    >
 
     <LinearLayout
+        android:layout_marginTop="5dp"
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="match_parent">
 
         <TextView
+            android:maxEms="15"
+            android:ellipsize="end"
+            android:singleLine="true"
             android:id="@+id/zhishi_item_tv_title"
             android:textColor="#000000"
             android:paddingLeft="10dp"
-            android:gravity="bottom"
             android:text="收到hi奥豪斯his啊是哦"
             android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/zhishi_item_tv_time"
             android:textColor="#000000"
@@ -24,15 +29,15 @@
             android:text="2017-08-01 13:00"
             android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
     <ImageView
+        android:layout_centerVertical="true"
         android:id="@+id/zhishi_item_iv"
-        android:padding="10dp"
         android:layout_alignParentRight="true"
         android:src="@mipmap/ic_launcher"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent" />
+        android:layout_width="100dp"
+        android:layout_height="50dp" />
 
 </RelativeLayout>

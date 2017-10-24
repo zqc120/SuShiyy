@@ -1,9 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EBEBEB"
     android:orientation="vertical">
 
+    <include
+        android:id="@+id/main_top"
+        layout="@layout/urm_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
 
+    <TextView
+        android:id="@+id/rule_line_tv"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
+
+    <GridView
+        android:padding="5dp"
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="90dp"
+        android:gravity="center"
+        android:numColumns="3">
+
+    </GridView>
 
 </LinearLayout>

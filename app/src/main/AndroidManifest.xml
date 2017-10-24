@@ -23,6 +23,9 @@
         <activity android:name=".activity.SuShiYingYangActivity"/>
         <activity android:name=".activity.YingYangChaXunActivity"/>
         <activity android:name=".activity.SouSuoShiCaiActivity"/>
+        <activity android:name=".activity.ShiCaiLeiXingActivity"/>
+        <activity android:name=".activity.ShuGuoLeiXingDetail"/>
+        <activity android:name=".activity.ShiCaiDuiBiActivity" />
 
     </application>
 

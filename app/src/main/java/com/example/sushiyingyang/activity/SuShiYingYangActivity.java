@@ -54,6 +54,7 @@ public class SuShiYingYangActivity extends Activity{
     private List<SsyyInfo.ResultBean.HelpListBean> list_help;
     private List<SsyyInfo.ResultBean.KnowledgeListBean> list_knowledge;
     private MyListView lv_bangzhu,lv_knowledge;
+    private LinearLayout ll_fanhui;
 
 
     @Override
@@ -195,6 +196,13 @@ public class SuShiYingYangActivity extends Activity{
     }
 
     private void initView() {
+        ll_fanhui = (LinearLayout) findViewById(R.id.ll_fanhui_ssyy);
+        ll_fanhui.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         ll_tishi = (LinearLayout) findViewById(R.id.ll_tishi);
         tv_sousuo = (TextView) findViewById(R.id.tv_sousuo);
         bt_chaxun = (Button) findViewById(R.id.bt_chaxun);
